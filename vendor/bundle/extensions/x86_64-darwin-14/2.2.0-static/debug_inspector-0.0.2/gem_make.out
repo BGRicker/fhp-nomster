@@ -1,0 +1,11 @@
+/Users/bricker/.rbenv/versions/2.2.0/bin/ruby -r ./siteconf20160416-54954-o4mi75.rb extconf.rb 
+creating Makefile
+
+make "DESTDIR=" clean
+
+make "DESTDIR="
+compiling debug_inspector.c
+linking shared-object debug_inspector.bundle
+
+make "DESTDIR=" install
+/usr/local/bin/ginstall -c -m 0755 debug_inspector.bundle ./.gem.20160416-54954-1uhkptj

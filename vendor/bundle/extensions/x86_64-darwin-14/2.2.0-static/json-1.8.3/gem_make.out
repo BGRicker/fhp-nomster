@@ -1,0 +1,9 @@
+/Users/bricker/.rbenv/versions/2.2.0/bin/ruby -r ./siteconf20160416-54954-mt9f1w.rb extconf.rb 
+creating Makefile
+
+make "DESTDIR=" clean
+
+make "DESTDIR="
+make: Nothing to be done for `all'.
+
+make "DESTDIR=" install
