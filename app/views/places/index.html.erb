@@ -1,11 +1,12 @@
-Welcome
+<div class="welcome">
+  Welcome
+</div>
 
 <% @places.each do |place| %>
-  <div>
-    <h1><%= place.name %></h1><br />
-    <i><%= place.address %></i><br />
+  <div class="cool-box col-xs-10 col-xs-offset-1">
+    <h1><%= place.name %></h1>
+    <i><%= place.address %></i><br /><br />
     <p><%= place.description %></p><br />
   </div>
 
-  <hr />
 <% end %>
