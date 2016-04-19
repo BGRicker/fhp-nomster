@@ -22,6 +22,20 @@ h1, h2, h3, h4, h5, h6 {
   padding:0;
 }
 
+body {
+  background: url('/assets/food.png');
+  font-family: Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans",
+  "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation
+  Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial,
+  sans-serif;
+}
+
+.navbar.navbar-inverse {
+  background:url('/assets/nav.png');
+  border-radius: 0;
+  box-shadow: 0px 1px 3px #2a2a2a;
+}
+
 .cool-box {
   -moz-box-shadow: 1px 1px 2px 0 #d0d0d0;
   -webkit-box-shadow: 1px 1px 2px 0 #d0d0d0;
