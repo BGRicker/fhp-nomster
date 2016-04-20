@@ -1,0 +1,11 @@
+<div class="cool-box col-xs-10 col-xs-offset-1">
+  New Place
+
+  <%= simple_form_for @place do |f| %>
+    <%= f.input :name %>
+    <%= f.input :address %>
+    <%= f.input :description %>
+    </br>
+    <%= f.submit 'Create', class: 'btn btn-success' %>
+  <% end %>
+</div>

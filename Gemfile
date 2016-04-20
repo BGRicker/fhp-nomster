@@ -11,6 +11,7 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'will_paginate', '~> 3.0'
+gem 'simple_form'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 group :development, :test do
