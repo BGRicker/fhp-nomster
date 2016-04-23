@@ -37,13 +37,13 @@ feature "User signs in" do
     visit root_path
 
     expect(page).not_to have_content "Sign Out"
-    expect(page).not_to have_content "hi"
+    expect(page).not_to have_content "hi test@user.com"
   end
 
   scenario "Sees the right links when signed in" do
     sign_in_as "test@user.com", "password"
 
     expect(page).to have_content "Sign Out"
-    expect(page).to have_content "hi"
+    expect(page).to have_content "hi test@user.com"
   end
 end

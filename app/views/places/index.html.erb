@@ -2,11 +2,14 @@
   Welcome
 </div>
 
-<% @places.each do |place| %>
+<% @places.desc_order.each do |place| %>
   <div class="cool-box col-xs-10 col-xs-offset-1">
     <h1><%= place.name %></h1>
     <i><%= place.address %></i><br /><br />
     <p><%= place.description %></p><br />
+    <% if place.user.present? %>
+      <small><%= place.user.email %></small>
+    <% end %>
   </div>
 
 <% end %>
