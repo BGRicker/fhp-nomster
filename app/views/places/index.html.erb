@@ -1,7 +1,3 @@
-<div class="welcome">
-  Welcome
-</div>
-
 <% @places.desc_order.each do |place| %>
   <div class="cool-box col-xs-10 col-xs-offset-1">
     <h1><%= link_to place.name, place_path(place) %></h1>
