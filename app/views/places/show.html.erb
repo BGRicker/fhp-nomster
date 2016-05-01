@@ -9,4 +9,33 @@
   <i><%= @place.address %></i>
   </br></br>
   <p><%= @place.description %></p>
+
+</head>
+<body>
+  <div id="map"></div>
+  <% if @place.latitude.present? && @place.longitude.present? %>
+
+    <script>
+
+      function initMap() {
+        var myLatLng = {lat: <%= @place.latitude %>, lng: <%= @place.longitude %>};
+
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 14,
+          center: myLatLng
+        });
+
+        var marker = new google.maps.Marker({
+          position: myLatLng,
+          map: map,
+          title: 'Hello World!'
+        });
+      }
+
+    </script>
+    <script async defer
+      src="https://maps.googleapis.com/maps/api/js?signed_in=true&callback=initMap"></script>
+
+    <div id="map"></div>
+  <% end %>
 </div>

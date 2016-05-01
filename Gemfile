@@ -13,6 +13,8 @@ gem 'jbuilder', '~> 2.0'
 gem 'will_paginate', '~> 3.0'
 gem 'simple_form'
 gem 'devise', '>= 3.2.4'
+gem 'geocoder'
+gem 'figaro', '~> 1.0.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 group :development, :test do

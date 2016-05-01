@@ -1,5 +1,7 @@
 class Place < ActiveRecord::Base
   belongs_to :user
+  geocoded_by :address
+  after_validation :geocode
   scope :desc_order, -> { order(id: :desc) }
 
   validates :name, presence: true, length: { in: 2..30 }
