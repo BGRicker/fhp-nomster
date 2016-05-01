@@ -3,7 +3,7 @@ require "rails_helper"
 feature "User edits a place" do
   scenario "Successfully" do
     sign_in_as "test@user.com", "password"
-    create_place "Cooltown", "185 Cool Street, Cooltown, CA", "the coolest place"
+    create_place "Cooltown", "185 Cool Street, Cooltown, CA", "the coolest place "*4
     first('h1').click_link('Cooltown')
 
     expect(page).to have_content "Cooltown"
@@ -12,7 +12,7 @@ feature "User edits a place" do
 
     click_on "Edit"
     expect(page).to have_content "Edit Cooltown"
-    update_place "Coolertown", "186 Cooler Street, Coolesttown, CA", "an even cooler place"
+    update_place "Coolertown", "186 Cooler Street, Coolesttown, CA", "an even cooler place "*4
 
     expect(page).to_not have_content "Cooltown"
     expect(page).to_not have_content "185 Cool Street, Cooltown, CA"
@@ -24,7 +24,7 @@ feature "User edits a place" do
 
   scenario "Unsuccessfully" do
     sign_in_as "test@user.com", "password"
-    create_place "Cooltown", "185 Cool Street, Cooltown, CA", "the coolest place"
+    create_place "Cooltown", "185 Cool Street, Cooltown, CA", "the coolest place "*4
     sign_out
     first('h1').click_link('Cooltown')
 
