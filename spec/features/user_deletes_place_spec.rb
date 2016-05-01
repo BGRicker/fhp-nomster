@@ -12,4 +12,15 @@ feature "User deletes a place" do
 
     expect { click_on 'Destroy' }.to change(Place, :count).by(-1)
   end
+
+  scenario "Unsuccessfully" do
+    visit root_path
+    first('h1').click_link('Cooltown')
+
+    expect(page).to have_content "Cooltown"
+    expect(page).to have_content "185 Cool Street, Cooltown, CA"
+    expect(page).to have_content "the coolest place"
+
+    expect(page).to_not have_content "Destroy"
+  end
 end

@@ -21,4 +21,17 @@ feature "User edits a place" do
     expect(page).to have_content "186 Cooler Street, Coolesttown, CA"
     expect(page).to have_content "an even cooler place"
   end
+
+  scenario "Unsuccessfully" do
+    sign_in_as "test@user.com", "password"
+    create_place "Cooltown", "185 Cool Street, Cooltown, CA", "the coolest place"
+    sign_out
+    first('h1').click_link('Cooltown')
+
+    expect(page).to have_content "Cooltown"
+    expect(page).to have_content "185 Cool Street, Cooltown, CA"
+    expect(page).to have_content "the coolest place"
+
+    expect(page).to_not have_content "Edit"
+  end
 end
