@@ -2,7 +2,6 @@ require "rails_helper"
 
 feature "User edits a place" do
   scenario "Successfully" do
-
     sign_in_as "test@user.com", "password"
     create_place "Cooltown", "185 Cool Street, Cooltown, CA", "the coolest place"
     first('h1').click_link('Cooltown')
